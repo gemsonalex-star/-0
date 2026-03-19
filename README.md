@@ -7,21 +7,21 @@
 #include <unordered_map>
 
 using namespace std;
-//تحسين النتيجه
+
 void Format() { cout << fixed << setprecision(5); }
-//مربع
+
 double Perimetersquare(double side) {return 4 * side;}
 double Areasquare(double side) {return side * side;}
 double Diagonalsquare(double side) { return side* sqrt(2);}
-//مستطيل
+
 double PerimeterRectangle(double length, double width) {return 2 * (length + width);}
 double AreaRectangle(double length, double width) { return width * length; }
 double DiagonalRectangle(double length, double width) {return sqrt((width * width) + (length * length)); }
-//دائرة
+
 double CircumferencCircle(double R) {  return 2 * 3.141592653589793 * R; }
 double AreaCircle(double R) { return 3.141592653589793 * R * R; }
-//مثلثات
-//متساوي الاضلاع
+
+
 double AreaEquilatearlTriangle(double side) { return (sqrt(3) / 4) * (side * side); }
 double PerimeterEquilatearlTriangle(double side) { return 3 * side; }
 //متساوي الساقين
