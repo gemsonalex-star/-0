@@ -11,29 +11,42 @@ using namespace std;
 void Format() { cout << fixed << setprecision(5); }
 
 double Perimetersquare(double side) {return 4 * side;}
+
 double Areasquare(double side) {return side * side;}
+
 double Diagonalsquare(double side) { return side* sqrt(2);}
 
 double PerimeterRectangle(double length, double width) {return 2 * (length + width);}
+
+
 double AreaRectangle(double length, double width) { return width * length; }
+
 double DiagonalRectangle(double length, double width) {return sqrt((width * width) + (length * length)); }
 
 double CircumferencCircle(double R) {  return 2 * 3.141592653589793 * R; }
+
 double AreaCircle(double R) { return 3.141592653589793 * R * R; }
 
 
 double AreaEquilatearlTriangle(double side) { return (sqrt(3) / 4) * (side * side); }
+
 double PerimeterEquilatearlTriangle(double side) { return 3 * side; }
+
 //متساوي الساقين
 double AreaIsoscelesTriangle(double side, double base) { return (0.5) * (base * (sqrt((side * side) - ((base / 2) * (base / 2))))); }
+
 double PerimeterIsoscelesTriangle(double side, double base) { return (2 * side) + base; }
 //مختلف الاضلاع
 double PerimeterScaleneTriangle(double a , double b, double c) { return a + b + c; }
+
 double AreaScaleneTriangle(double a, double b, double c){ double p = (a + b + c) / 2; return sqrt(p * (p - a) * (p - b) * (p - c)); }
 //قائم
 double PerimeterRightTriangle(double a, double b){ double c = sqrt((a * a) + (b * b)); return a + b + c; }
+
 double AreaRightTriangle(double a, double b) { return (0.5)* (a * b); }
+
 double HypotenuseRightTriangle(double a, double b ){return sqrt((a * a) + (b * b)); }
+
 //حساب نوع المثلث
 int Detectrtangletype(double a, double b, double c) {
 	if (a + b <= c || a + c <= b || b + c <= a) return 0;
@@ -44,35 +57,54 @@ int Detectrtangletype(double a, double b, double c) {
 //حساب أطوال الأرتفاعات
 //مختلف الاضلاع
 double HeightscaleneA(double a, double b, double c) { double A = AreaScaleneTriangle(a, b, c); return (2 * A) / a; }
+
 double HeightscaleneB(double a, double b, double c) { double A = AreaScaleneTriangle(a, b, c); return (2 * A) / b; }
+
 double HeightscaleneC(double a, double b, double c) { double A = AreaScaleneTriangle(a, b, c); return (2 * A) / c; }
+
 //قائم
 double HeightRightA(double a, double b) { return b; }
+
 double HeightRightB(double a, double b) { return a; }
+
 double HeightRightC(double a, double b,double c) { return (b*a)/c; }
+
 //متساوي الساقين
+
 double HeightIsoscelesTriangleC(double a, double c ) { return sqrt((a * a) - ((c / 2) * (c / 2))); }
+
 double HeightIsoscelesTriangleA(double a, double c) {double h_c = HeightIsoscelesTriangleC(a, c); return (c * h_c) / a;}
+
 double HeightIsoscelesTriangleB(double a, double c) {return HeightIsoscelesTriangleA(a, c);}
 //متساوي الاضلاع
 double HeightEquilatearlTriangle(double side) { return (sqrt(3) / 2) * (side); }
 //لوغاريتم
 double  NaturalLogarithm2(double num) { return log(num); }
+
 double  CommonLogarithm10(double num) { return log10(num); }
+
 double  BinaryLogarithm(double num) { return log(num)/log(2); }
+
 //أسي
 double  Exponential(double num){ return exp(num); }
+
 //زوايا
 //تحويل للراديان
 double RadToDeg(double rad) {return rad * 180.0 / 3.141592653589793;}
 //توابع مثاثية
 double TrigonometricFunctionsS(double angle) { return sin(angle); }
+
 double TrigonometricFunctionsC(double angle) { return cos(angle); }
+
 double TrigonometricFunctionsT(double angle) { return tan(angle); }
+
 //زائدية
 double HyperbolicS(double x) { return sinh(x); }
+
 double HyperbolicC(double x) { return cosh(x); }
+
 double HyperbolicT(double x) { return tanh(x); }
+
 //نصوص
 void choic1() {
 	cout << "=============CHOICE=================\n";
@@ -82,6 +114,7 @@ void choic1() {
 	cout << "3-FOR Conversions.\n";
 	cout << "ENTER YOUR CHOICE : ";
 }
+
 void choic2() {
 	cout << "=============CHOICE===========\n";
 	cout << "1-FOR Squares & FOR Rectangle.\n";
@@ -89,23 +122,27 @@ void choic2() {
 	cout << "3-FOR Triangle.\n";
 	cout << "ENTER YOUR CHOICE : ";
 }
+
 void choic3(){
 	cout << "=============CHOICE===========\n";
 	cout << "1-FOR Squares.\n";
 	cout << "2-FOR Rectangle.\n";
 	cout << "ENTER YOUR CHOICE : ";
 }
+
 void choic4(){
 	cout << "=============CHOICE===========\n";
 	cout << "1-FOR Preimeter && Area.\n";
 	cout << "2-FOR Diagonal\n ";
 	cout << "ENTER YOUR CHOICE : ";
 }
+
 void choic5(){
 	cout << "=============CHOICE===========\n";
 	cout << "1-FOR Circumferenc && Area.\n";
 	cout << "ENTER YOUR CHOICE : ";
 }
+
 void choic6(){
 	cout << "=============CHOICE===========\n";
 	cout << "1-For Perimeter and Area.\n";
@@ -113,18 +150,21 @@ void choic6(){
 	cout << "3-For Hypotenuse.\n";
 	cout << "ENTER YOUR CHOICE : ";
 }
+
 void choic7(){
 	cout << "=============CHOICE===========\n";
 	cout << "1-FOR Logarithm and Exponential(e^x).\n";
 	cout << "2-Angle Functions.\n";
 	cout << "ENTER YOUR CHOICE : ";
 }
+
 void choic8(){
 	cout << "=============CHOICE===========\n";
 	cout << "1-Logarithm .\n";
 	cout << "2-Exponential.\n";
 	cout << "ENTER YOUR CHOICE : ";
 }
+
 void choic9(){
 	cout << "=============CHOICE===========\n";
 	cout << "Choose Logarithm Type:\n";
@@ -133,6 +173,7 @@ void choic9(){
 	cout << "3-Binary Logarithm(log2).\n";
 	cout << "ENTER YOUR CHOICE : ";
 }
+
 void choic10(){
 	cout << "=============CHOICE===========\n";
 	cout << "1-Trigonometric Functions.\n";
@@ -140,36 +181,44 @@ void choic10(){
 	cout << "3-Inverse Trigonometric Functions.\n";
 	cout << "ENTER YOUR CHOICE : ";
 }
+
 void choic11(){
 	cout << "=============CHOICE===========\n";
 	cout << "1-For Lengthو Weight Time.\n";
 	cout << "ENTER YOUR CHOICE : ";
 }
+
 void please(){
 	cout << "=============PLEASE===========\n";
 
 	cout << "*Please  enter your choice again*\n ";
 }
+
 void walcome(){
 	cout << "================================== \n";
 	cout << "==========\"WALCOME AGAIN!\"=========== \n";
 	cout << "================================== \n";
 }
+
 void thank(){
 	cout << "===========================================================================================\n";
 	cout << " ****Thank you for using the Geometry Master. Precision is always one calculation away.****\n";
 	cout << "===========================================================================================\n";
 }
+
 void continu(){
 	cout << "=============================================================================\n";
 	cout << " DO you want to continue (1)==>YES (0)==>NO ?\n";
 }
+
 void input(){ 
 	cout << "=============INPUT=================\n";
 }
+
 void Result(){ 
 	cout << "=============RESULT=================\n"; 
 }
+
 int main()
 {
 	system("color 1F");
